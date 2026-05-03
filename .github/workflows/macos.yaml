@@ -1,0 +1,48 @@
+name: macos
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-14
+            arch: arm64
+          - runner: macos-13
+            arch: x86_64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build --parallel 4
+
+      - name: Install
+        run: cmake --install build --prefix install
+
+      - name: Set up testsuite layout
+        run: |
+          mkdir -p build/bin
+          ln -sf $PWD/build/src/OMSimulator/OMSimulator build/bin/OMSimulator
+          ln -sf $PWD/install/bin/OMSimulatorPython3 build/bin/OMSimulatorPython3
+          make -C testsuite/difftool
+          ln -sf $PWD/install/bin/omc-diff build/bin/omc-diff
+
+      - name: Run testsuite
+        working-directory: testsuite
+        run: make -j 4 all || true
+
+      - name: Summary
+        working-directory: testsuite
+        run: |
+          grep -h "out of.*tests failed" *.log | \
+            awk '{f+=$2; t+=$5} END {printf "%d/%d failed (%.1f%% pass)\n", f, t, 100*(t-f)/t}'
