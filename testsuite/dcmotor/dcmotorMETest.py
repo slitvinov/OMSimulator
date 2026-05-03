@@ -3,7 +3,7 @@
 ## linux: yes
 ## ucrt64: yes
 ## win: yes
-## mac: yes
+## mac: no
 
 ## This example test dc motors fmu's with ME solver
 

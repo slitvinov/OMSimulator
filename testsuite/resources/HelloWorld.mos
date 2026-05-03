@@ -8,6 +8,6 @@ equation
 end HelloWorld;
 "); getErrorString();
 
-buildModelFMU(HelloWorld, version="2.0", fmuType="me_cs", fileNamePrefix="HelloWorld", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
+buildModelFMU(HelloWorld, version="2.0", fmuType="me_cs", fileNamePrefix="HelloWorld"); getErrorString();
 
 system("zip -qd HelloWorld.fmu sources/* && unzip -o HelloWorld.fmu -d HelloWorld/");

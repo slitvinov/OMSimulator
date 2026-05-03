@@ -2,10 +2,11 @@
 <fmiModelDescription
   fmiVersion="2.0"
   modelName="equationPair.equation1"
-  guid="{3d8ed249-ff56-4456-a993-a9f29d1e1bb8}"
+  guid="{57573bf9-c748-4eef-92c9-db2daa035ed2}"
   description=""
-  generationTool="OpenModelica Compiler v1.19.0-dev-655-g5b39f819ea"
-  generationDateAndTime="2022-03-09T13:15:34Z"
+  version=""
+  generationTool="OpenModelica Compiler b8efa99dec-cmake"
+  generationDateAndTime="2026-05-02T13:14:53Z"
   variableNamingConvention="structured"
   numberOfEventIndicators="0">
   <CoSimulation
@@ -17,8 +18,8 @@
     canRunAsynchronuously = "false"
     canBeInstantiatedOnlyOncePerProcess="false"
     canNotUseMemoryManagementFunctions="false"
-    canGetAndSetFMUstate="false"
-    canSerializeFMUstate="false"
+    canGetAndSetFMUstate="true"
+    canSerializeFMUstate="true"
     providesDirectionalDerivative="true">
   </CoSimulation>
   <LogCategories>
@@ -34,7 +35,7 @@
     <Category name="logAll" description="logAll" />
     <Category name="logFmi2Call" description="logFmi2Call" />
   </LogCategories>
-  <DefaultExperiment startTime="0.0" stopTime="0.0" tolerance="1e-06"/>
+  <DefaultExperiment startTime="0.0" stopTime="0.0" tolerance="1e-6" stepSize="0.0"/>
   <ModelVariables>
   <!-- Index of variable = "1" -->
   <ScalarVariable
@@ -45,13 +46,20 @@
   </ScalarVariable>
   <!-- Index of variable = "2" -->
   <ScalarVariable
+    name="_D_x2_der"
+    valueReference="2"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "3" -->
+  <ScalarVariable
     name="x1"
     valueReference="3"
     causality="input"
     >
     <Real start="0.0"/>
   </ScalarVariable>
-  <!-- Index of variable = "3" -->
+  <!-- Index of variable = "4" -->
   <ScalarVariable
     name="x2"
     valueReference="4"
@@ -62,10 +70,10 @@
   </ModelVariables>
   <ModelStructure>
     <Outputs>
-      <Unknown index="3" dependencies="2" dependenciesKind="dependent" />
+      <Unknown index="4" dependencies="3" dependenciesKind="dependent" />
     </Outputs>
     <InitialUnknowns>
-      <Unknown index="3" dependencies="2" dependenciesKind="dependent" />
+      <Unknown index="4" dependencies="3" dependenciesKind="dependent" />
     </InitialUnknowns>
   </ModelStructure>
 </fmiModelDescription>

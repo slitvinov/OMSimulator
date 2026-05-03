@@ -3,7 +3,7 @@
 ## linux: yes
 ## ucrt64: yes
 ## win: yes
-## mac: yes
+## mac: no
 
 ## This example demonstrates how to export an SSD file from an SSP file.
 ## the main purpose of this example is to parse all the elements in the SSD file

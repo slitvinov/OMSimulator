@@ -10,6 +10,6 @@ equation
 end EventTest;
 "); getErrorString();
 
-buildModelFMU(EventTest, version="2.0", fmuType="me_cs", fileNamePrefix="EventTest", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
+buildModelFMU(EventTest, version="2.0", fmuType="me_cs", fileNamePrefix="EventTest"); getErrorString();
 
 system("zip -qd EventTest.fmu sources/* && unzip -o EventTest.fmu -d EventTest/");

@@ -7,8 +7,8 @@ platforms := {
   "x86_64-w64-mingw32 docker run multiarch/crossbuild"
 };
 
-buildModelFMU(equationPair.equation1, version="2.0", fmuType="cs", fileNamePrefix="equationPair.equation1", platforms=platforms); getErrorString();
-buildModelFMU(equationPair.equation2, version="2.0", fmuType="cs", fileNamePrefix="equationPair.equation2", platforms=platforms); getErrorString();
+buildModelFMU(equationPair.equation1, version="2.0", fmuType="cs", fileNamePrefix="equationPair.equation1"); getErrorString();
+buildModelFMU(equationPair.equation2, version="2.0", fmuType="cs", fileNamePrefix="equationPair.equation2"); getErrorString();
 
 system("unzip -o equationPair.equation1.fmu -d equationPair.equation1/");
 system("unzip -o equationPair.equation2.fmu -d equationPair.equation2/");

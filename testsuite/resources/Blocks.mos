@@ -1,16 +1,16 @@
 loadModel(Modelica, {"4.0.0"}); getErrorString();
 
-buildModelFMU(Modelica.Blocks.Math.Add, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Add", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Math.Feedback, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Feedback", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Math.Gain, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Gain", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Math.Product, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Product", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Sources.ContinuousClock, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.ContinuousClock", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Sources.Constant, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.Constant", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Sources.Sine, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.Sine", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Sources.Step, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.Step", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Math.Add3, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Add3", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Nonlinear.Limiter, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Nonlinear.Limiter", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
-buildModelFMU(Modelica.Blocks.Continuous.Integrator, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Continuous.Integrator", platforms={"x86_64-linux-gnu docker run multiarch/crossbuild","x86_64-w64-mingw32 docker run multiarch/crossbuild"}); getErrorString();
+buildModelFMU(Modelica.Blocks.Math.Add, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Add"); getErrorString();
+buildModelFMU(Modelica.Blocks.Math.Feedback, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Feedback"); getErrorString();
+buildModelFMU(Modelica.Blocks.Math.Gain, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Gain"); getErrorString();
+buildModelFMU(Modelica.Blocks.Math.Product, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Product"); getErrorString();
+buildModelFMU(Modelica.Blocks.Sources.ContinuousClock, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.ContinuousClock"); getErrorString();
+buildModelFMU(Modelica.Blocks.Sources.Constant, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.Constant"); getErrorString();
+buildModelFMU(Modelica.Blocks.Sources.Sine, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.Sine"); getErrorString();
+buildModelFMU(Modelica.Blocks.Sources.Step, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Sources.Step"); getErrorString();
+buildModelFMU(Modelica.Blocks.Math.Add3, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Math.Add3"); getErrorString();
+buildModelFMU(Modelica.Blocks.Nonlinear.Limiter, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Nonlinear.Limiter"); getErrorString();
+buildModelFMU(Modelica.Blocks.Continuous.Integrator, version="2.0", fmuType="me_cs", fileNamePrefix="Modelica.Blocks.Continuous.Integrator"); getErrorString();
 
 system("zip -qd Modelica.Blocks.Math.Add.fmu sources/* && unzip -o Modelica.Blocks.Math.Add.fmu -d Modelica.Blocks.Math.Add/");
 system("zip -qd Modelica.Blocks.Math.Feedback.fmu sources/* && unzip -o Modelica.Blocks.Math.Feedback.fmu -d Modelica.Blocks.Math.Feedback/");
